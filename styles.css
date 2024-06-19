@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282828;
+
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+    
+}
+
+
+
+
+.container {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 50%;
+ 
+}
+header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #af9343;
+}
+
+header p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+
+.hours-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #af9343;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hours-box h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px 20px;
+    justify-content: center;
+}
+
+.hours-grid .day {
+    text-align: right;
+    font-weight: bold;
+    color: #af9343;
+}
+
+.hours-grid .time {
+    text-align: left;
+    color: #ffffff;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .link {
+    background-color: #af9343;
+    color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .link i {
+    font-size: 20px;
+}
+
+main .link:hover {
+    background-color: #9b8035;
+}
+
+footer {
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+  }
+
+
+
+
+  
+#nos-services {
+    padding: 2rem;
+    
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+   
+}
+
+#nos-services h1 {
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+.service {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.service h3 {
+    margin-top: 0;
+    color: #af9343;
+}
+
+.service p {
+
+    color: #fff;
+}
+
+.service img {
+
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+.card {
+    width: 100%;
+    height: 254px;
+    background: linear-gradient(144deg, #af9343,  40%,#9a9a9a  60%, #435FAF);
+    border: none;
+    border-radius: 50px;
+    padding-top: 0px;
+    position: relative;
+    margin: auto;
+    font-family: inherit;
+    margin-bottom: 100px;
+    
+  }
+  
+  .card span {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 1.3em;
+  }
+  
+
+  
+  .card .img {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    
+    border-radius: 10px;
+  }
+  
+
+  
+  .card button:hover {
+    background: #212121;
+    color: #ffffff;
+  }
+
+
+
+
+
+
+
+
+
+.google-maps {
+    
+    padding: 5px;
+    background-color: #af9343;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+  .google-maps iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.review-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #af9343;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.review-link:hover {
+    text-decoration: underline;
+}
+h2{
+
+    color: #fff;
+}
+
+
+
+
+
+

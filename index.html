@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber VIP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi855iP69w9dlWZi_SWt1Dwm-Tta3n_cRcLg19s5-rjGRJIvcbVFA4dGWYzKkl-c3SF0bpCTN72zFWJ8UJjQCbA5PoIIfoxOde9AKeiZPg8Xq1YelF-yq4M3herxPqRadJzr7d-Yh7ThP1ri-v62o_KH1m0LWWheuSDV1XBpuv9I4MHR7bQFI0MUlbArKo/s320/snap%20lens%20couver%201080.png">
+    
+    <style>
+        .cookie-choices-info {
+            background-color: #9b8035;
+
+
+        }
+         .cookie-choices-inner {
+            background-color: #af9343;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 600px;
+            z-index: 1000;
+            display: contents;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cookie-choices-text {
+            color: #333;
+            font-size: 0.9em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .cookie-choices-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cookie-choices-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cookie-choices-button:hover {
+            background-color: #0056b3;
+        }
+
+        .cookie-choices-button:last-child {
+            background-color: #af9343;
+        }
+
+        .cookie-choices-button:last-child:hover {
+            background-color: #a17600;
+        }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282828;
+
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+    
+}
+
+
+
+
+.container {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 50%;
+ 
+}
+header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #af9343;
+}
+
+header p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+
+.hours-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #af9343;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hours-box h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px 20px;
+    justify-content: center;
+}
+
+.hours-grid .day {
+    text-align: right;
+    font-weight: bold;
+    color: #af9343;
+}
+
+.hours-grid .time {
+    text-align: left;
+    color: #ffffff;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .link {
+    background-color: #af9343;
+    color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .link i {
+    font-size: 20px;
+}
+
+main .link:hover {
+    background-color: #9b8035;
+}
+
+footer {
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+  }
+
+
+
+
+  
+#nos-services {
+    padding: 2rem;
+    
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+   
+}
+
+#nos-services h1 {
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+.service {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.service h3 {
+    margin-top: 0;
+    color: #af9343;
+}
+
+.service p {
+
+    color: #fff;
+}
+
+.service img {
+
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+.card {
+    width: 100%;
+    height: 254px;
+    background:transparent;
+    border: none;
+    border-radius: 50px;
+    padding-top: 0px;
+    position: relative;
+    font-family: inherit;
+    margin-bottom: 50px;
+    
+  }
+  
+  .card span {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 1.3em;
+  }
+  
+
+  
+  .card .img {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    
+    border-radius: 10px;
+  }
+  
+
+  
+  .card button:hover {
+    background: #212121;
+    color: #ffffff;
+  }
+
+
+
+
+
+
+
+
+
+.google-maps {
+    
+    padding: 5px;
+    background-color: #af9343;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+  .google-maps iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.review-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #af9343;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.review-link:hover {
+    text-decoration: underline;
+}
+h2{
+
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+     
+    <div class="container">
+        <header>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaYN5R30HoAASV5CiApne3WgXvV8jNQsXt9dobtolxsSTWeDh-eOTTQ14vgob-q8ktux2oWwsoSuTLg11K77s_epDyHhW2t2w0D22a8dzvitgiJ7LoZ_VK1MxOd1MDHqWY2eeWiiF4Bi_y3tkvqbDqinNxKKqfMTnkbq_4kxWQKRSZexaC7lcx2FP7TyU/s320/barbershop-logo.png" alt="Barbershop Logo" class="logo">
+            <h1>Barber VIP</h1>
+            <p>Le Luxe d'une Coupe VIP à Forbach</p>
+            
+        </header>
+        <main>
+            <div class="link" onclick="openLink('https://calendar.app.google/NuQr6XPrNP9P5Tw67')">
+                <i class="fas fa-calendar-check"></i><span>Prendre Rendez-vous</span>
+            </div>
+            <div class="link" onclick="document.getElementById('nos-services').scrollIntoView({ behavior: 'smooth' })">
+                <i class="fas fa-cut"></i><span>Nos Services</span>
+            </div>
+            <div class="link" onclick="openLink('tel:+33771456746')">
+                <i class="fas fa-phone-alt"></i><span>Nous Contacter</span>
+            </div>
+            <div class="link" onclick="openLink('https://www.instagram.com/le_berbero?igsh=MTJqM2E2NW9od3Yzbw==')">
+                <i class="fab fa-instagram"></i><span>Suivez-nous sur Instagram</span>
+            </div>
+            <div class="link" onclick="openLink('https://www.tiktok.com/@nawfalbarber')">
+                <i class="fab fa-tiktok"></i><span>Suivez-nous sur TikTok</span>
+            </div>
+            <div class="link" onclick="openLink('https://snapchat.com/t/w4eZoQxy')">
+                <i class="fab fa-snapchat-ghost"></i><span>Ajoutez-nous sur Snapchat</span>
+            </div>
+
+
+            <section id="nos-services">
+                <h1>Nos Services</h1>
+                <div class="service" id="service1">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgECxqhpxLlzRdmSBb6X2RyPlBAWsNvnj9ybXLxE_p2JNcnrFxbDHPgfd-ma-8dRDZqPTs8WGcTMzZtJ1O9AB-PmwlrHMkKEPTB8HJK49aLa5Zv5U9FNb-y9j8qEh6ANBa59GsloGlJnkuOk9rqdjnqlmVrH7p9VVly02AaVPL4iGPncqvBraEhRhWvOdw/s320/electric-razor_6002519.png" alt="pnf" class="png">
+                    <h3>Coupe de Cheveux</h3>
+                    <p>Profitez d'une coupe de cheveux professionnelle pour un look impeccable.</p>
+                    
+                </div>
+                <div class="service" id="service2">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFSWGOCz0zOsLuVbXJ5KMKK8vX6PgXWQSNW2rnQh-HTSVTGIHaIV6ToCXGaEyZo1MHhzxca6poYrj99-BW8fHNNxCJjLq-xYuWKxvyhTtKlb9bwKzT5NMGQm_LfmMC3ODW_fuLlN41-Xp27pXVkug21jFeyozkAUQNVXX15yjUCszg1L7H0uXUJ8Wfzls/s320/barber-shop_2241679.png" alt="pnf" class="png">
+                    <h3>Rasage Traditionnel</h3>
+                    <p>Un rasage traditionnel pour une expérience de rasage douce et agréable.</p>
+                   
+                </div>
+                <div class="service" id="service3">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVWxfggQ7mvx-ElfDS_1I9y7HyAuTixB7tsmrrk5x5sRUxfzOzir4P6t-hVASQKOwDxjNW-H3n-Jh9PTlCH1NGOOYKmUGFkVeNfMCHGVueDJgQcfPRpR9o_iXgFwFC3E1NM0aqbF2dYvyJtDeURiB23c1_Lvczjd2UrLqUp7YHIDPXNmPwl1Pd19Kj3a0/s320/beard-trimming_6003325.png" alt="pnf" class="png">
+                    <h3>Soins de la Barbe</h3>
+                    <p>Des soins de la barbe pour une barbe bien entretenue et stylée.</p>
+                    
+                </div>
+            </section>
+
+
+            <section id="nos-équipe"></section>
+            <h2>Nos équipe</h2>
+            <div class="card">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhChTQeySZ7DuMV0UvFm-IE_R8Ce54KB62Te5moW6Cfnjl-FPxltfsaWWf-DJrcqpSoZQIOe_HgP2aZTpl6FAt8qNevuCXe1JM4Q3niGHw6bu8y0l64wxYTOB1QWn2s3QazwvDp8QqkdL7G8Y8zK_6Pk54fX-4DCWinmi1hB26oftFtarob3s0aOuF11sU/s320/FSP05052.jpg" alt="Barbershop equep" class="img">
+              </div>
+              
+             
+            </section>
+            <br>
+            <br>
+            
+            <h2>Nous Trouver et Donner votre Avis</h2>
+            <div class="google-maps">
+                
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162.97832521257234!2d6.902418070753571!3d49.188166979905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4795b385bc4a44b9%3A0x8d6d13f1dea407a!2sBarber%20VIP!5e0!3m2!1sen!2sfr!4v1717169457542!5m2!1sen!2sfr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <br>
+                <a href="https://maps.app.goo.gl/jQGLX7teUDLRhZ296" target="_blank" class="review-link">
+                    <i class="fas fa-star"></i> Laissez-nous un avis sur Google
+                </a>
+            </div>
+
+
+
+        
+        </main>
+        <footer>
+            <p>&copy; 2024 RAFA57. Tous droits réservés.</p>
+        </footer>
+    </div>
+    <script>
+        
+
+function openLink(url) {
+    window.open(url, '_blank');
+}
+
+    </script>
+</body>
+</html>
